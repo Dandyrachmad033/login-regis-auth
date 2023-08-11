@@ -1,7 +1,8 @@
 body {
     /* Create a linear gradient background */
     background: linear-gradient(to bottom right,
-    #03C8A8,#89D8D3
+    #69F0AE, #0097A7 
+
 
     );
     /* Set the background size to cover the whole viewport */
@@ -18,12 +19,18 @@ body {
   }
  /* Google Font Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boulder&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+  font-family: "Boulder" , sans-serif;
 }
+.title {
+  font-family: "Boulder", sans-serif;
+  /* Other styling properties */
+}
+
 
 .container{
   position: relative;
@@ -113,6 +120,11 @@ body {
   height: 100%;
   width: 100%;
   background: #fff;
+  top: -100%;
+  transition: left 0.4s ease-in-out;
+}
+.show-signup .forms {
+  top: 0;
 }
 .container .form-content{
   display: flex;
@@ -136,7 +148,7 @@ body {
   bottom: 0;
   height: 3px;
   width: 25px;
-  background: #29d860;
+  background: #1DE9B6;
 }
 .forms .signup-form  .title:before{
   width: 20px;
@@ -165,11 +177,11 @@ body {
 }
 .form-content .input-box input:focus,
 .form-content .input-box input:valid{
-  border-color: #29d860;
+  border-color: #4DB6AC;
 }
 .form-content .input-box i{
   position: absolute;
-  color: #29d860;
+  color: #1DE9B6;
   font-size: 17px;
 }
 .forms .form-content .text{
@@ -189,17 +201,17 @@ body {
 }
 .forms .form-content .button input{
   color: #fff;
-  background: #29d860;
+  background: #1DE9B6;
   border-radius: 6px;
   padding: 0;
   cursor: pointer;
   transition: all 0.4s ease;
 }
 .forms .form-content .button input:hover{
-  background: #29d860;
+  background: #1DE9B6;
 }
 .forms .form-content label{
-  color: #29d860;
+  color: #1DE9B6;
   cursor: pointer;
 }
 .forms .form-content label:hover{
@@ -230,4 +242,9 @@ body {
   .container #flip:checked ~ .forms .login-form{
     display: none;
   }
+
+}
+
+.form-select{
+  width: 600px;
 }

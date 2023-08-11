@@ -30,9 +30,34 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::pages');
-$routes->post('Login','users_login::login');
-$routes->post('Register','users_register::registered');
-$routes->get('Dashboard','Home::dash');
+$routes->post('Login', 'users_login::login');
+$routes->post('Register', 'users_register::registered');
+$routes->get('Dashboard', 'dashboard::welcome');
+$routes->get('Menu-one', 'dashboard::menu');
+$routes->get('Menu-two', 'dashboard::menu_two');
+$routes->get('Menu-tree', 'dashboard::menu_tree');
+$routes->get('Menu-four', 'dashboard::menu_four');
+$routes->get('Menu-Five', 'dashboard::menu_five');
+$routes->get('Dashback', 'dashboard::welcome');
+$routes->get('SuratMasuk', 'dashboard::dash');
+$routes->get('SuratKeluar', 'dashboard::dash_skeluar');
+$routes->get('SuratTugas', 'dashboard::dash_stugas');
+$routes->get('NotaDinas', 'dashboard::dash_notad');
+$routes->post('InsertData', 'dashboard::insert_data');
+$routes->post('AddData', 'dashboard::addData');
+$routes->get('Logout', 'users_logout::logout');
+$routes->post('Download', 'export::download');
+$routes->post('ExportKeluar', 'export::export_surat_keluar');
+$routes->post('ExportTugas', 'export::export_surat_tugas');
+$routes->post('ExportNota', 'export::export_nota_dinas');
+$routes->post('Upload', 'upload::inserting');
+$routes->post('Delete', 'upload::deleting');
+$routes->post('Export', 'export::exporting');
+$routes->post('Load', 'upload::load');
+$routes->post('PlusData', 'dashboard::plusdata');
+$routes->post('Increase', 'dashboard::increase');
+$routes->get('Direct', 'users_logout::redirect');
+
 
 
 
